@@ -31,13 +31,13 @@ Abre una terminal en tu nueva computadora y clona este repositorio directamente 
 * **En Windows (PowerShell):**
   ```powershell
   cd "$env:USERPROFILE\.gemini\config\skills"
-  git clone https://github.com/TU_USUARIO/mimenu-prospeccion.git prospeccion-mimenu
+  git clone https://github.com/mangoex/skill-prospeccion.git prospeccion-mimenu
   ```
 
 * **En macOS / Linux:**
   ```bash
   cd ~/.gemini/config/skills
-  git clone https://github.com/TU_USUARIO/mimenu-prospeccion.git prospeccion-mimenu
+  git clone https://github.com/mangoex/skill-prospeccion.git prospeccion-mimenu
   ```
 
 ### 2. Instalar dependencias de Python
