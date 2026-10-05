@@ -4,16 +4,33 @@ Guiones de alta conversión diseñados para dueños o encargados de pequeños y 
 
 ---
 
-## 🌮 1. Plantilla para Taquerías / Antojitos / Comida Rápida (Score A)
+## 🌮 1. Plantilla para Taquerías (Contundente con Demo en Vivo y Punto de Venta)
 
-> **Contexto:** Tienen foto de la carta en Google Maps o una pizarra física, y atienden pedidos por WhatsApp.
+> **Enlace de Demo Oficial:** `https://tacos.mimenu.onl`
 >
-> **Mensaje:**
-> *"¡Hola {nombre_negocio}! 👋 Les escribo porque vi sus excelentes calificaciones en Google Maps ({num_reseñas} opiniones). Noté que a la gente le encantan sus {platillo_destacado}, pero al buscar su menú solo encontramos fotos de la carta o preguntas sobre precios.*
+> **Versión Genérica (Lista para copiar y pegar a cualquier taquería):**
+> 
+> ¡Hola! 👋 Vi las excelentes reseñas y la fama que tienen sus tacos en Google Maps.
+> 
+> Les comparto una herramienta pensada al 100% para taquerías: **mimenu** no es solo una carta digital, es también su **punto de venta y sistema de pedidos**, todo configurable y personalizable directamente desde su celular (precios, fotos, extras, combos, todo en segundos).
+> 
+> Pueden ver y probar cómo funciona la demo en vivo en menos de 1 minuto aquí:
+> 👉 https://tacos.mimenu.onl
+> 
+> Es totalmente **gratis para probar**, sin complicaciones ni letras chiquitas. Si tienen cualquier duda o quieren que lo revisemos juntos, por aquí lo platicamos con gusto. 🌮🙌
 >
-> *En **mimenu** ayudamos a taquerías y locales de comida a tener su menú digital interactivo directo en WhatsApp y Google Maps: se abre al instante, con fotos nítidas y los precios se actualizan en 10 segundos.*
+> ---
 >
-> *¿Les gustaría ver una pequeña demo de cómo luciría su carta digital hoy mismo sin compromiso?"*
+> **Versión Personalizada (con nombre de taquería):**
+>
+> ¡Hola equipo de {nombre_negocio}! 👋 Vi las excelentes opiniones que tienen en Google Maps sobre su comida ({num_reseñas} reseñas).
+>
+> Les escribo porque creamos una herramienta pensada para taquerías como la suya: **mimenu** no es solo un menú interactivo, es su propio **punto de venta y sistema de comandas/pedidos**, administrable 100% desde el celular.
+>
+> Pueden probar la demo interactiva en vivo aquí:
+> 👉 https://tacos.mimenu.onl
+>
+> Probarla es completamente **gratis**. Cualquier duda sobre cómo montarlo para su taquería, lo platicamos por aquí sin compromiso. 🌮🔥
 
 ---
 

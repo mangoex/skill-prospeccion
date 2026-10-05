@@ -145,12 +145,24 @@ def qualify_lead(lead: Dict[str, Any]) -> Dict[str, Any]:
         opportunity = "Cuenta con presencia web, verificar si la experiencia del menú móvil es optimizable."
 
     # Generación de Pitch personalizado para WhatsApp
-    pitch = (
-        f"Hola {name}! 👋 Vi las excelentes opiniones que tienen en Google Maps sobre su comida ({reviews_count} reseñas). "
-        f"Noté que muchos comensales buscan su menú en línea pero solo encuentran fotos de la carta o enlaces desactualizados. "
-        f"En mimenu ayudamos a negocios de {category} a tener su menú interactivo, rápido y actualizado en WhatsApp y Google Maps "
-        f"para que los clientes pidan más rápido sin hacer preguntas repetitivas. ¿Les gustaría que les arme una demo gratuita de 5 minutos?"
-    )
+    is_tacos = any(x in category.lower() or x in name.lower() for x in ["taco", "taquer"])
+    demo_url = "https://tacos.mimenu.onl" if is_tacos else "https://mimenu.onl"
+
+    if is_tacos:
+        pitch = (
+            f"¡Hola {name}! 👋 Vi las excelentes opiniones que tienen en Google Maps sobre sus tacos ({reviews_count} reseñas). "
+            f"Les comparto una herramienta pensada para taquerías: mimenu no es solo una carta digital, es también su punto de venta "
+            f"y sistema de pedidos, todo configurable y personalizable 100% desde su celular. "
+            f"Pueden probar la demo en vivo en 1 minuto aquí: 👉 {demo_url} "
+            f"Es totalmente gratis para probar. Cualquier duda sobre cómo montarlo, por aquí lo platicamos con gusto. 🌮🙌"
+        )
+    else:
+        pitch = (
+            f"¡Hola {name}! 👋 Vi las excelentes opiniones que tienen en Google Maps sobre su comida ({reviews_count} reseñas). "
+            f"En mimenu ayudamos a negocios de {category} a tener su menú interactivo, punto de venta y toma de pedidos directo desde el celular. "
+            f"Pueden ver una demo en vivo aquí: 👉 {demo_url} "
+            f"Es gratis para probar y cualquier duda lo platicamos con gusto."
+        )
 
     lead["reviewsCount"] = reviews_count
     lead["rating"] = rating
