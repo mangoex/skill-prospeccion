@@ -123,8 +123,8 @@ def qualify_lead(lead: Dict[str, Any]) -> Dict[str, Any]:
         lead["pitch"] = None
         return lead
 
-    reviews_count = lead.get("totalScore") or lead.get("reviewsCount") or 0
-    rating = lead.get("rating") or lead.get("totalScoreStars") or 0.0
+    reviews_count = lead.get("reviewsCount") or lead.get("reviews_count") or lead.get("userRatingsTotal") or 0
+    rating = lead.get("totalScore") or lead.get("rating") or lead.get("stars") or 0.0
     website = (lead.get("website") or "").strip().lower()
     menu_url = (lead.get("menu") or lead.get("menuUrl") or "").strip().lower()
     category = lead.get("categoryName") or lead.get("subTitle") or "Comida"
@@ -152,6 +152,8 @@ def qualify_lead(lead: Dict[str, Any]) -> Dict[str, Any]:
         f"para que los clientes pidan más rápido sin hacer preguntas repetitivas. ¿Les gustaría que les arme una demo gratuita de 5 minutos?"
     )
 
+    lead["reviewsCount"] = reviews_count
+    lead["rating"] = rating
     lead["lead_score"] = score
     lead["opportunity_summary"] = opportunity
     lead["pitch"] = pitch
@@ -246,8 +248,8 @@ def run_apify_google_maps_scraper(location: str, category: str, limit: int, toke
 
     print(f"📡 Iniciando Actor de Apify (compass/crawler-google-places)... Búsqueda: '{category} en {location}' (Límite: {limit})")
     run = client.actor("compass/crawler-google-places").call(run_input=run_input)
-    
-    dataset_items = client.dataset(run["defaultDatasetId"]).list_items().items
+    dataset_id = getattr(run, "default_dataset_id", None) or (run.get("defaultDatasetId") if isinstance(run, dict) else None)
+    dataset_items = client.dataset(dataset_id).list_items().items
     return [dict(item) if not isinstance(item, dict) else item for item in dataset_items]
 
 
